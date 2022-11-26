@@ -4,7 +4,7 @@ import { Message } from "../../typings";
 
 
 type Data = {
-    message: Message;
+    messages: Message[];
 }
 
 type ErrorData = {
@@ -14,19 +14,14 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data | ErrorData>
 ) {
-    if(req.method !== 'POST') {
+    if(req.method !== 'GET') {
         res.status(405).json({body: "method not allowed"});
         return;
     }
 
-    const { message } = req.body; 
+    const messagesRes = await redis.hvals('messages')
+    const  messages: Message[] =
+     messagesRes.map((message) => JSON.parse(message)).sort((a, b) => b.created_at - a.created_at)
 
-    const newMessage = {
-        ...message, 
-        created_at: Date.now(),
-    };
-
-    await redis.hset('messages', message.id, JSON.stringify(newMessage));
-
-    res.status(200).json({ message: newMessage})
+    res.status(200).json({ messages})
 }
