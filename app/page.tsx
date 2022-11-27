@@ -3,7 +3,7 @@ import ChatInput from './ChatInput'
 import MessageList from './MessageList'
 
 function Home() {
-  return <div className="text-4xl">
+  return <div className="text-xl">
     <main>
         {/* MessageList */}
         <MessageList />
