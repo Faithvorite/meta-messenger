@@ -10,7 +10,7 @@ export const serverPusher = new Pusher({
 })
 
 export const clientPusher = new ClientPusher(
-    process.env.PUSHER_ID as string, {
+    '23309b2030c24788642d', {
         cluster: 'us2',
         forceTLS: true,
       });

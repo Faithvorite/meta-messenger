@@ -58,7 +58,7 @@ function ChatInput () {
         type="text" 
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="enter messge here..."
+        placeholder="Enter message here..."
         className='
         flex-1 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent px-5 py-3 disabled:opacity-50 disabled:cursor-not-allowed
         '/>
