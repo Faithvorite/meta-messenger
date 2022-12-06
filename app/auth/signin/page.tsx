@@ -4,8 +4,9 @@ import SignInComponent from "./SignInComponent";
 
 async function SignInPage() {
     const providers = await getProviders();
+
   return (
-  <div>
+  <div className="grid justify-center">
     <div>
     <Image
     className="rounded-full mx-2 object-cover"
@@ -15,10 +16,11 @@ async function SignInPage() {
     alt="profile pic"
     />
     </div>
+    
     <SignInComponent providers={providers}/>
     </div>
-    )
+    );
   
 }
 
-export default SignInPage
+export default SignInPage;
