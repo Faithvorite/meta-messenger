@@ -7,7 +7,8 @@ import { unstable_getServerSession } from "next-auth/next"
 async function Header() {
     const session = await unstable_getServerSession();
 
-    if(session) return (
+    if(session) 
+    return (
         <header className='sticky top-0 z-50 bg-white flex justify-between items-center p-10 shadow-sm'>
             <div className='flex space-x-2'>
                 <Image 

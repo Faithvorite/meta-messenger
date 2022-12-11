@@ -6,9 +6,9 @@ import { useSession } from "next-auth/react"
 type Props = {
     key:string;
     message: Message;
-}
+};
 
-function MessageComponent({ message }: Props){
+function MessageComponent({ message }: Props) {
     const { data: session } = useSession();
     const isUser = session?.user?.email === message.email;
   
