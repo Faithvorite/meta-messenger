@@ -6,7 +6,7 @@ import { unstable_getServerSession } from "next-auth/next";
 
 async function HomePage() {
   const data = await fetch(
-    `${'https://my-meta-messenger.vercel.app' || 'http://localhost:3000'}/api/getMessages`)
+    `${'https://my-meta-messenger.vercel.ap/' || 'http://localhost:3000'}/api/getMessages`)
   .then(
     (res) => res.json()
     );
