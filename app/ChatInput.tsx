@@ -25,7 +25,7 @@ function ChatInput () {
             id,
             message: messageToSend,
             created_at: Date.now(),
-            username: 'faith',
+            username: 'Meta',
             profilePic: 'https://links.papareact.com/jne',
             email: 'faithrn09@gmail.com'
         }

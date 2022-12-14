@@ -16,7 +16,7 @@ const Header = () => {
                 alt='profile pic' />
             <div>
             <p className='text-blue-400'>Logged in as: </p>
-            <p className='font-bold text-lg'>Faith Nguyen</p>
+            <p className='font-bold text-lg'>Meta Bot</p>
             </div>
             </div>
             <LogoutButton />

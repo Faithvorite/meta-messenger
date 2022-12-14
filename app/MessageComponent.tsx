@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 import { Message } from '../typings';
+import TimeAgo from "react-timeago"
 
 type Props = {
     key:string;
@@ -29,7 +30,7 @@ function MessageComponent({message}: Props){
                 <p>{message.message}</p>
             </div>
             <p className={`text-[0.65rem] italic px-2 text-gray-300 ${isUser && 'text-right'}`} >
-                {new Date(message.created_at).toLocaleString()}
+                <TimeAgo date={new Date(message.created_at)} />
                 </p>
         </div>
     </div>
